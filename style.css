@@ -548,6 +548,7 @@ html, body {
     gap: 20px;
 }
 
+
 .m-sub-content a{
     display: flex;
     flex-direction: column;
@@ -632,7 +633,15 @@ html, body {
     .cart-dropdown {
         display: none;
     }
-
+    .mattress-sub-container {
+    width: 100%;
+    /* max-width: 350px; */
+    }
+    .m-sub-content {
+        margin-left: 2rem;
+        margin-bottom: 2rem;
+        height: 100vh;
+    }
 }
 
 
