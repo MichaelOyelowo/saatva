@@ -1180,13 +1180,19 @@ html, body {
 /* Responsive Tablet and Mobile */
 @media (max-width:1200px) {
 .features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     margin: 0 20px;
 }
 
 }
 
-@media (max-width: 680px) {
+@media (max-width: 560px) {
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
 .feature-card {
     padding: 30px 20px;
 }
@@ -1199,6 +1205,7 @@ html, body {
     padding: 60px 5%;
     margin-top: 4rem;
     background-color: #f6f5f3;
+    display: none;
 }
 
 .recently-view-container h2 {
@@ -1211,14 +1218,15 @@ html, body {
 
 .product-grid {
     display: flex;
-    justify-content: center;
+    width: 100%;
     gap: 30px;
-    max-width: 1100px;
-    margin: 0 auto;
+    max-width: 1200px;
+    flex-wrap: nowrap;
+    overflow: hidden;
 }
 
 .product-card {
-    flex: 1;
+    flex: 0 0 calc(33.333% - 14px); 
     background: transparent;
     max-width: 500px;
 }
@@ -1354,10 +1362,29 @@ html, body {
 
 /* --- Tablet and Mobile Responsive Adjustments --- */
 
+
 @media (max-width: 1024px) {
     .product-grid {
         gap: 20px;
         padding: 0 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    #rv-track {
+    display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        justify-content: flex-start;
+        gap: 12px;
+        width: 100%;
+        max-width: 900px;
+        padding: 0 20px 20px 20px;
+        margin-left: 10px;
+        -webkit-overflow-scrolling: touch;
+    }
+    #rv-track::-webkit-scrollbar {
+        display: none;
     }
 }
 

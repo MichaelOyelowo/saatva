@@ -447,64 +447,7 @@
         <!-- Added Arrows for Tablet/Desktop -->
         <div class="slideshow-container">
             <div class="product-grid" id="rv-track">
-                <!-- Card 1 -->
-                <div class="product-card">
-                    <div class="image-container">
-                        <span class="badge">MOST POPULAR</span>
-                        <img src="https://res.cloudinary.com/dffuf2gwh/image/upload/v1767985439/saatva-latex-hybrid-lifestyle-standard-3-2_honx9g.jpg" alt="Saatva Classic">
-                        <!-- Secondary Image (Visible on hover) -->
-                        <img src="https://res.cloudinary.com/dffuf2gwh/image/upload/v1767985438/saatva-latex-hybrid-detail1-3-2_qdgy2q.jpg" class="hover-img" alt="Saatva Classic Detail">
-                    </div>
-                    
-                    <div class="product-info">
-                        <div class="ratings">
-                            <span class="stars">★★★★★</span>
-                            <span class="rating-score">4.8</span>
-                            <a href="#">4,944 Reviews</a>
-                        </div>
-                        <a href="#" class="product-name">Saatva Classic</a>
-                        <p class="product-subtitle">Luxury Innerspring</p>
-                        <div class="pricing">
-                            <span class="current-price">$1,190 - $2,685</span>
-                            <span class="old-price">$1,399 - $3,158</span>
-                        </div>
-                        <p class="affirm-text">Or as low as <strong>$67/mo</strong> with 
-                            <span class="affirm-brand">
-                            <img src="./black_logo-transparent_bg-removebg-preview.png" alt="">
-                            </span>
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="product-card">
-                    <div class="image-container">
-                        <span class="badge">BEST COOLING</span>
-                        <img src="https://res.cloudinary.com/dffuf2gwh/image/upload/v1767985444/valencia-angle-taupe-3-2_csfpyz.jpg" alt="Saatva Latex Hybrid">
-                        <img src="https://res.cloudinary.com/dffuf2gwh/image/upload/v1767985439/saatva-rx-detail1-3-2_cfmem7.jpg" class="hover-img" alt="Saatva Classic Detail">
-                    </div>
-                    
-                    <div class="product-info">
-                        <div class="ratings">
-                            <span class="stars">★★★★★</span>
-                            <span class="rating-score">4.8</span>
-                            <a href="#">321 Reviews</a>
-                        </div>
-                        <a href="#" class="product-name">Saatva Latex Hybrid</a>
-                        <p class="product-subtitle">Organic Natural Latex Hybrid</p>
-                        <div class="pricing">
-                            <span class="current-price">$1,445 - $3,101</span>
-                            <span class="old-price">$1,699 - $3,648</span>
-                        </div>
-                        <p class="affirm-text">Or as low as <strong>$81/mo</strong> with 
-                            <span class="affirm-brand">
-                                <span class="affirm-brand">
-                                    <img src="./black_logo-transparent_bg-removebg-preview.png" alt="">
-                                </span>
-                            </span>
-                        </p>
-                    </div>
-                </div>
+               
         </div>
         </div>
          <!-- Added Pagination Dots -->
@@ -521,8 +464,8 @@
         
         <div class="product-view-grid">
             <!-- Card 1 -->
-            <div class="product-card">
-                <div class="image-container">
+            <div class="product-card clickable-product" data-id="classic">
+               <div class="image-container">
                     <span class="badge">MOST POPULAR</span>
                     <img src="https://res.cloudinary.com/dffuf2gwh/image/upload/v1767985442/solaire-lifestyle-standard-3-2_eoqw4a.jpg" alt="Saatva Classic">
                     <!-- Secondary Image (Visible on hover) -->
@@ -543,16 +486,14 @@
                     </div>
                     <p class="affirm-text">Or as low as <strong>$67/mo</strong> with 
                         <span class="affirm-brand">
-                            <span class="affirm-brand">
-                                <img src="./black_logo-transparent_bg-removebg-preview.png" alt="">
-                            </span>
+                            <img src="./black_logo-transparent_bg-removebg-preview.png" alt="">
                         </span>
                     </p>
                 </div>
             </div>
 
             <!-- Card 2 -->
-            <div class="product-card">
+            <div class="product-card clickable-product" data-id="rx">
                 <div class="image-container">
                     <span class="badge">BEST COOLING</span>
                     <img src="https://res.cloudinary.com/dffuf2gwh/image/upload/v1767985440/saatva-rx-lifestyle-3-2_lro7ll.jpg" alt="Saatva Latex Hybrid">
@@ -565,13 +506,13 @@
                         <span class="rating-score">4.8</span>
                         <a href="#">321 Reviews</a>
                     </div>
-                    <a href="#" class="product-name">Saatva Latex Hybrid</a>
-                    <p class="product-subtitle">Organic Natural Latex Hybrid</p>
+                    <a href="#" class="product-name">Saatva Rx</a>
+                    <p class="product-subtitle">Memory Foam Hybrid for Chronic Back Pain</p>
                     <div class="pricing">
                         <span class="current-price">$1,445 - $3,101</span>
                         <span class="old-price">$1,699 - $3,648</span>
                     </div>
-                    <p class="affirm-text">Or as low as <strong>$81/mo</strong> with 
+                    <p class="affirm-text">Or as low as <strong>$95/mo</strong> with 
                         <span class="affirm-brand">
                             <span class="affirm-brand">
                                 <img src="./black_logo-transparent_bg-removebg-preview.png" alt="">
@@ -581,7 +522,7 @@
                 </div>
             </div>
             <!-- Card 3 -->
-            <div class="product-card">
+            <div class="product-card clickable-product" data-id="latex">
                 <div class="image-container">
                     <span class="badge">BEST COOLING</span>
                     <img src="https://res.cloudinary.com/dffuf2gwh/image/upload/v1767985440/santorini-angle-taupe-3-2_dbcj3y.jpg" alt="Saatva Latex Hybrid">
@@ -610,7 +551,7 @@
                 </div>
             </div>
             <!-- Card 4 -->
-            <div class="product-card">
+            <div class="product-card clickable-product" data-id="contour5">
                 <div class="image-container">
                     <span class="badge">BEST COOLING</span>
                     <img src="https://res.cloudinary.com/dffuf2gwh/image/upload/v1767985427/memory-foam-hybrid-angle-standard-3-2_mxhcej.jpg" alt="Saatva Latex Hybrid">
@@ -623,13 +564,13 @@
                         <span class="rating-score">4.8</span>
                         <a href="#">321 Reviews</a>
                     </div>
-                    <a href="#" class="product-name">Saatva Latex Hybrid</a>
-                    <p class="product-subtitle">Organic Natural Latex Hybrid</p>
+                    <a href="#" class="product-name">Contour5</a>
+                    <p class="product-subtitle">Cooling Ultra-Premium Memory Foam</p>
                     <div class="pricing">
                         <span class="current-price">$1,445 - $3,101</span>
                         <span class="old-price">$1,699 - $3,648</span>
                     </div>
-                    <p class="affirm-text">Or as low as <strong>$81/mo</strong> with 
+                    <p class="affirm-text">Or as low as <strong>$90/mo</strong> with 
                         <span class="affirm-brand">
                             <span class="affirm-brand">
                                 <img src="./black_logo-transparent_bg-removebg-preview.png" alt="">
@@ -639,7 +580,7 @@
                 </div>
             </div>
             <!-- Card 5 -->
-            <div class="product-card">
+            <div class="product-card clickable-product" data-id="foam">
                 <div class="image-container">
                     <span class="badge">BEST COOLING</span>
                     <img src="https://res.cloudinary.com/dffuf2gwh/image/upload/v1767985412/basel-studio-linen-16-9_psiois.jpg" alt="Saatva Latex Hybrid">
@@ -652,8 +593,8 @@
                         <span class="rating-score">4.8</span>
                         <a href="#">321 Reviews</a>
                     </div>
-                    <a href="#" class="product-name">Saatva Latex Hybrid</a>
-                    <p class="product-subtitle">Organic Natural Latex Hybrid</p>
+                    <a href="#" class="product-name">Memory Foam Hybrid</a>
+                    <p class="product-subtitle">Cooling Premium Memory Foam Hybrid</p>
                     <div class="pricing">
                         <span class="current-price">$1,445 - $3,101</span>
                         <span class="old-price">$1,699 - $3,648</span>
@@ -668,11 +609,11 @@
                 </div>
             </div>
             <!-- Card 6 -->
-            <div class="product-card">
+            <div class="product-card clickable-product" data-id="zenhaven">
                 <div class="image-container">
                     <span class="badge">BEST COOLING</span>
                     <img src="https://res.cloudinary.com/dffuf2gwh/image/upload/v1767985431/organic-mattress-pad-detail-3-2_byzygl.jpg" alt="Saatva Latex Hybrid">
-                    <img src="https://res.cloudinary.com/dffuf2gwh/image/upload/v1767985428/memory-foam-pillow-corner-3-2_ndkd64.jpg" class="hover-img" alt="Saatva Classic Detail">
+                    <img src="https://res.cloudinary.com/dffuf2gwh/image/upload/v1767985431/organic-mattress-pad-detail-3-2_byzygl.jpg" class="hover-img" alt="Saatva Classic Detail">
                 </div>
                 
                 <div class="product-info">
@@ -681,8 +622,8 @@
                         <span class="rating-score">4.8</span>
                         <a href="#">321 Reviews</a>
                     </div>
-                    <a href="#" class="product-name">Saatva Latex Hybrid</a>
-                    <p class="product-subtitle">Organic Natural Latex Hybrid</p>
+                    <a href="#" class="product-name">Zenhaven</a>
+                    <p class="product-subtitle">Dual-Sided Organic Natural Latex</p>
                     <div class="pricing">
                         <span class="current-price">$1,445 - $3,101</span>
                         <span class="old-price">$1,699 - $3,648</span>
