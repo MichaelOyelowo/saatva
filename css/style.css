@@ -684,11 +684,13 @@ html, body {
     font-size: 3rem;
     color: rgba(146, 130, 130, 0.5);
     cursor: pointer;
+    user-select: none;
 }
 
 .pro-close:hover {
     color: #928282;
 }
+
 
 .pro-headline {
     color: #928282;
@@ -1283,12 +1285,14 @@ html, body {
 
 .ratings {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 5px;
     margin-bottom: 8px;
 }
 
 .stars {
+    margin-bottom: 4px;
     color: #d5aa63; 
     font-size: 20px;
 }

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Items - Saatva</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/saved.css">
+</head>
+<body>
+<div class="head-notification">
+    <div>
+        <span>
+            <span>Don't Wait! Winter Blowout Sale Starts Now! | Up to $625 off&nbsp;|&nbsp;Ends&nbsp;1/8</span>
+        </span>&nbsp;|&nbsp;
+        <button class="head_more_info">More Info</button>
+    </div>
+</div>
+
+<!-- Black overlay that appears behind the menu -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleMenu()"></div>
+
+<!-- The Actual Sidebar -->
+<div class="mobile-sidebar" id="mobileSidebar">
+    <div class="sidebar-header">
+            <div class="close-menu">
+                <span class="close-x" onclick="toggleMenu()">&times;</span>
+            </div>
+            <div class="logo">
+                <a href="/index.html">
+                    <svg name="saatvaLogo" class="saatva-logo" role="img" alt="Saatva Logo" description="Saatva Logo" viewBox="0 0 180 38.3" width="130" height="38.3">
+                    <title id="saatvaLogo">Saatva Logo</title>
+                    <path d="M59.8,37.5h-4.9v-4.8c-2.4,3.5-6.4,5.6-10.7,5.6c-8.5,0-15.4-7-15.4-16.2c0-9.3,7-16.3,15.5-16.3c8.8,0,15.5,7.1,15.5,16.3L59.8,37.5z M44.4,10.5c-5.8,0-10.4,5.1-10.4,11.6s4.7,11.5,10.4,11.5c5.7,0,10.4-5.1,10.4-11.5C54.8,15.7,50,10.5,44.4,10.5z"></path>
+                    <path d="M96.3,37.5h-4.9v-4.8c-2.4,3.5-6.4,5.6-10.7,5.6c-8.5,0-15.4-7-15.4-16.2c0-9.3,7-16.3,15.5-16.3c8.8,0,15.5,7.1,15.5,16.3L96.3,37.5z M80.8,10.5c-5.8,0-10.4,5.1-10.4,11.6s4.7,11.5,10.4,11.5c5.7,0,10.4-5.1,10.4-11.5C91.3,15.7,86.5,10.5,80.8,10.5z"></path>
+                    <path d="M115,37.5c-7.2,0.8-12.2-3.4-12.2-11.3V0h5v6.6h7v4.9h-7v14.8c0,5.5,3.3,6.8,7.1,6.6V37.5z"></path><path d="M119.2,6.6h5.4l8.5,24.1h0.1l8.5-24.1h5.4l-11.2,30.9h-5.5L119.2,6.6z"></path>
+                    <path d="M180,37.5h-4.9v-4.8c-2.4,3.5-6.4,5.6-10.7,5.6c-8.5,0-15.4-7-15.4-16.2c0-9.3,7-16.3,15.5-16.3c8.8,0,15.5,7.1,15.5,16.3V37.5z M164.5,10.5c-5.8,0-10.4,5.1-10.4,11.6s4.7,11.5,10.4,11.5c5.7,0,10.4-5.1,10.4-11.5C175,15.7,170.2,10.5,164.5,10.5z"></path>
+                    <path d="M0,33.2c3.6,3.2,8.2,5,13,4.9c6.8,0,11.2-3.7,11.2-9.3v-0.1c0-4.8-2.8-7.4-10-9.1c-6-1.4-7.6-2.5-7.6-5.1v-0.1c0-2.3,2.2-3.9,5.3-3.9c3.1,0.1,6.1,1.2,8.5,3.2l2.8-4C20,7.2,16,5.8,11.9,5.9c-6.3,0-10.7,3.7-10.7,9V15c0,5.7,3.7,7.7,10.4,9.3c5.5,1.3,7.2,2.4,7.2,5v0.1c0,2.5-2.3,4.1-5.7,4.1c-3.6,0-6.7-1.3-10-4.1L0,33.2z"></path>
+                    </svg>
+                </a>
+            </div>
+    </div>
+
+    <div class="sidebar-content">
+        <div id="sidebarWrap">
+            <ul class="sidebar-nav">
+            <li><a href="#" onclick="mattressA()">Mattresses <span class="chevron">
+                <svg name="arrow-right" class="icon_arrow-right" role="img" alt="Toggle Mattresses" description="Toggle Mattresses" viewBox="0 0 14 34" width="14" height="18"><title id="Toggle Mattresses">Toggle Mattresses</title><polyline points="1,1 13,17 13,17 1,33"></polyline></svg>
+            </span></a></li>
+            <li><a href="#" onclick="furnitureD()">Furniture & Decor <span class="chevron">
+                <svg name="arrow-right" class="icon_arrow-right" role="img" alt="Toggle Furniture &amp; Decor" description="Toggle Furniture &amp; Decor" viewBox="0 0 14 34" width="14" height="18"><title id="Toggle Furniture &amp; Decor">Toggle Furniture &amp; Decor</title><polyline points="1,1 13,17 13,17 1,33"></polyline></svg>
+            </span></a></li>
+            <li><a href="#" onclick="bedding()">Bedding <span class="chevron">
+                <svg name="arrow-right" class="icon_arrow-right" role="img" alt="Toggle Bedding" description="Toggle Bedding" viewBox="0 0 14 34" width="14" height="18"><title id="Toggle Bedding">Toggle Bedding</title><polyline points="1,1 13,17 13,17 1,33"></polyline></svg>
+            </span></a></li>
+            <li><a href="#" onclick="bundle()">Bundles <span class="chevron">
+                <svg name="arrow-right" class="icon_arrow-right" role="img" alt="Toggle Bundles" description="Toggle Bundles" viewBox="0 0 14 34" width="14" height="18"><title id="Toggle Bundles">Toggle Bundles</title><polyline points="1,1 13,17 13,17 1,33"></polyline></svg>
+            </span></a></li>
+            <li><a href="#" class="sidebar-sale">Sale</a></li>
+        </ul>
+
+        <div class="sidebar-footer">
+            <a href="#">
+                <svg name="heart" class="s-icon" role="img" alt="saved items icon" description="saved items icon" viewBox="0 0 24 22" width="20" height="20"><title id="favoriteIcon">Saved Items</title><path d="M22.3587 3.73504C21.6462 2.40657 17.1797 -2.04194 12.0019 4.39863C6.56436 -2.04194 2.35633 2.40657 1.64511 3.73504C0.350043 6.19149 1.12683 9.91043 2.94017 11.7033L12.0031 21L21.0661 11.7033C22.877 9.91043 23.6538 6.19276 22.3587 3.73504H22.3587Z"></path></svg>
+                <span>Saved Items</span>
+            </a>
+            <a href="#">
+                <svg class="s-icon" width="21" height="21" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg"><title>support</title><path d="M2.29344 7.008C2.83344 3.592 5.51344 1 8.73744 1C11.9614 1 14.6414 3.592 15.1814 7.008M15.1814 7.008C14.5134 7.212 13.8174 8.168 13.4774 9.428C13.0814 10.904 13.3254 12.268 14.0214 12.572C14.0574 12.592 14.0934 12.6 14.1294 12.612C14.9054 12.82 15.8694 11.732 16.2854 10.18L16.2894 10.176C16.7014 8.624 16.4134 7.2 15.6374 6.992C15.4894 6.952 15.3334 6.96 15.1814 7.008ZM10.8374 15.16C12.1254 14.676 13.2294 13.764 14.0174 12.572M3.45744 12.572C3.42144 12.588 3.38544 12.6 3.34544 12.612C2.56944 12.82 1.60544 11.732 1.18944 10.18C0.773439 8.628 1.06544 7.2 1.84144 6.996C1.98544 6.956 2.14144 6.964 2.29744 7.012C2.96544 7.216 3.66544 8.172 4.00144 9.432C4.39344 10.908 4.15344 12.268 3.46144 12.576L3.45744 12.572ZM10.9174 15.544C10.9174 16.348 9.93744 17 8.73744 17C7.53744 17 6.55744 16.348 6.55744 15.544C6.55744 14.74 7.53744 14.088 8.73744 14.088C9.74144 14.088 10.5894 14.54 10.8374 15.156C10.8934 15.28 10.9174 15.408 10.9174 15.54V15.544Z" stroke="#6B6257" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                <span>Contact Us</span>
+            </a>
+            <a href="#">
+                <svg class="s-icon" width="18" height="18" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg"><title>track-order</title><path d="M14.3333 6H16L17.6667 7.66667L21 9.33333V12.6667H19.3333M14.3333 6V1H1V12.6667H2.66667M14.3333 6V12.6667M19.3333 12.6667C19.3333 13.5875 18.5875 14.3333 17.6667 14.3333C16.7458 14.3333 16 13.5875 16 12.6667M19.3333 12.6667C19.3333 11.7458 18.5875 11 17.6667 11C16.7458 11 16 11.7458 16 12.6667M16 12.6667H14.3333M14.3333 12.6667H6M12.6667 7.66667H7.66667M12.6667 6H6M4.33333 4.33333H12.6667M2.66667 12.6667C2.66667 13.5875 3.4125 14.3333 4.33333 14.3333C5.25417 14.3333 6 13.5875 6 12.6667M2.66667 12.6667C2.66667 11.7458 3.4125 11 4.33333 11C5.25417 11 6 11.7458 6 12.6667" stroke="#6B6257" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                <span>Track My Order</span>
+            </a>
+            <a href="#">
+                <svg name="chat" class="s-icon" role="img" alt="Chat" description="Chat" viewBox="0 -3 19 16" width="19" height="16"><title id="chatIcon">Chat</title><path d="M15.4-2H3.3C2-2,1-1,1,0.2v6.3C1,7.8,2,9,3.3,9h7.3l3.1,2.9V9h1.7c1.3,0,2.3-1.2,2.3-2.4V0.2C17.7-1,16.6-2,15.4-2z"></path><path d="M6.8,3.7c0,0.5-0.4,0.8-0.8,0.8S5.2,4.1,5.2,3.7S5.5,2.8,6,2.8S6.8,3.2,6.8,3.7"></path><path d="M10.2,3.7c0,0.5-0.4,0.8-0.8,0.8c-0.5,0-0.8-0.4-0.8-0.8s0.4-0.8,0.8-0.8C9.8,2.8,10.2,3.2,10.2,3.7"></path><path d="M12.7,4.5c-0.5,0-0.8-0.4-0.8-0.8s0.4-0.8,0.8-0.8c0.5,0,0.8,0.4,0.8,0.8S13.1,4.5,12.7,4.5z"></path></svg>
+                <span>Chat</span>
+            </a>
+        </div>
+        </div>
+        
+        <!-- Mattress Inner -->
+        <div class="mattress-sub-container" id="mattressSub">
+            <div class="mattress-m-header" onclick="closeSubMenu()">
+                <span class="m-sub-back-arrow">
+                    <svg name="arrow-left" class="icon_arrow-right" role="img" alt="Back to main nav" description="Back to main nav" viewBox="0 0 14 34" width="14" height="16"><title id="mattresses-back-to-nav">Back to main nav from Mattresses</title><polyline points="13,1 1,17 1,17 13,33"></polyline></svg>
+                    <span>Mattresses</span>
+                </span>
+            </div>
+    
+            <div class="m-sub-content">
+                <a href="#" class="sub-btn">Shop all mattresses</a>
+                <a href="#" class="sub-btn">Take our mattress quiz</a>
+                <a href="#" class="sub-btn">Compare our mattresses</a>
+                <div class="m-sub-category-down">
+                    <div class="m-sub-category-box">
+                        <h4>Most Popular Mattresses</h4>
+                        <p>Saatva Classic, Saatva RX, Saatva Latex Hybrid</p>
+                    </div>
+                    <div class="m-sub-category-box">
+                        <h4>Specialty Mattresses</h4>
+                        <p>Solaire, Saatva HD, Zenhaven</p>
+                    </div>
+                    <div class="m-sub-category-box">
+                        <h4>Memory Foam Mattresses</h4>
+                        <p>For a body-hugging feel</p>
+                    </div>
+                    <div class="m-sub-category-box">
+                        <h4>Saatva Kids</h4>
+                        <p>Comfortable Sleep from baby to teen</p>
+                    </div>
+                    <div class="m-sub-category-box">
+                        <h4>Saatva Pets</h4>
+                        <p>Upgraded comfort for furry friends</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- Furniture & Decor -->
+        <div class="mattress-sub-container" id="furnitureSub">
+            <div class="mattress-m-header" onclick="closeSubMenu()">
+                <span class="m-sub-back-arrow">
+                    <svg name="arrow-left" class="icon_arrow-right" role="img" alt="Back to main nav" description="Back to main nav" viewBox="0 0 14 34" width="14" height="16"><title id="mattresses-back-to-nav">Back to main nav from Mattresses</title><polyline points="13,1 1,17 1,17 13,33"></polyline></svg>
+                    <span>Furniture & Decor</span>
+                </span>
+            </div>
+    
+            <div class="m-sub-content">
+                <a href="#" class="f-sub-b">Shop all Furniture & Decor</a>
+                <div class="m-sub-category-down">
+                    <div class="m-sub-category-box">
+                        <h4>Bed Frames</h4>
+                    </div>
+                    <div class="m-sub-category-box">
+                        <h4>Foundation & Adjustable Bases</h4>
+                    </div>
+                    <div class="m-sub-category-box">
+                        <h4>NightStands</h4>
+                    </div>
+                    <div class="m-sub-category-box">
+                        <h4>Lamps / Lightning</h4>
+                    </div>
+                    <div class="m-sub-category-box">
+                        <h4>Benches & Ottomans</h4>
+                    </div>
+                    <div class="m-sub-category-box">
+                        <h4>Bedrooms Chairs</h4>
+                    </div>
+                    <div class="m-sub-category-box">
+                        <h4>Bedrooms Rugs</h4>
+                    </div>
+                    <div class="m-sub-category-box">
+                        <h4>Candles</h4>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- Bedding Inner -->
+        <div class="mattress-sub-container" id="beddingSub">
+            <div class="mattress-m-header" onclick="closeSubMenu()">
+                <span class="m-sub-back-arrow">
+                    <svg name="arrow-left" class="icon_arrow-right" role="img" alt="Back to main nav" description="Back to main nav" viewBox="0 0 14 34" width="14" height="16"><title id="mattresses-back-to-nav">Back to main nav from Mattresses</title><polyline points="13,1 1,17 1,17 13,33"></polyline></svg>
+                    <span>Bedding</span>
+                </span>
+            </div>
+    
+            <div class="m-sub-content">
+                <a href="#" class="sub-btn">Shop all Bedding</a>
+                <a href="#" class="sub-btn">Take our Pillows quiz</a>
+                <a href="#" class="sub-btn">Take our Toppers quiz</a>
+                <div class="m-sub-category-down">
+                    <div class="m-sub-category-box">
+                        <h4>Mattresses Pad & Toppers</h4>
+                    </div>
+                    <div class="m-sub-category-box">
+                        <h4>Pillows</h4>
+                    </div>
+                    <div class="m-sub-category-box">
+                        <h4>Sheets</h4>
+                    </div>
+                    <div class="m-sub-category-box">
+                        <h4>Duvet & Comforters</h4>
+                    </div>
+                    <div class="m-sub-category-box">
+                        <h4>Blankets & Quilts</h4>
+                    </div>
+                    <div class="m-sub-category-box">
+                        <h4>Pillowcase</h4>
+                    </div>
+                    <div class="m-sub-category-box">
+                        <h4>Eye Masks</h4>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- Bundle Inner -->
+        <div class="mattress-sub-container" id="bundleSub">
+            <div class="mattress-m-header" onclick="closeSubMenu()">
+                <span class="m-sub-back-arrow">
+                    <svg name="arrow-left" class="icon_arrow-right" role="img" alt="Back to main nav" description="Back to main nav" viewBox="0 0 14 34" width="14" height="16"><title id="mattresses-back-to-nav">Back to main nav from Mattresses</title><polyline points="13,1 1,17 1,17 13,33"></polyline></svg>
+                    <span>Bundles</span>
+                </span>
+            </div>
+    
+            <div class="m-sub-content">
+                <a href="#" class="sub-btn">Shop all Bundles</a>
+                <div class="m-sub-category-down">
+                    <div class="m-sub-category-box">
+                        <h4>Bundles</h4>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<nav>
+    <div class="navbar">
+        <div class="nav-top">
+            <div class="nav-menu" id="menuBtn" onclick="toggleMenu()">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 30 30">
+                    <path d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z"></path>
+                </svg>
+            </div>
+            <div class="nav-links">
+                <a href="#">Contact Us</a>
+                <a href="#">Track My Order</a>
+                <a href="#">Saatva Viewing Rooms</a>
+            </div>
+            <div class="logo">
+                <a href="/index.html">
+                    <svg name="saatvaLogo" class="saatva-logo" role="img" alt="Saatva Logo" description="Saatva Logo" viewBox="0 0 180 38.3" width="130" height="38.3">
+                    <title id="saatvaLogo">Saatva Logo</title>
+                    <path d="M59.8,37.5h-4.9v-4.8c-2.4,3.5-6.4,5.6-10.7,5.6c-8.5,0-15.4-7-15.4-16.2c0-9.3,7-16.3,15.5-16.3c8.8,0,15.5,7.1,15.5,16.3L59.8,37.5z M44.4,10.5c-5.8,0-10.4,5.1-10.4,11.6s4.7,11.5,10.4,11.5c5.7,0,10.4-5.1,10.4-11.5C54.8,15.7,50,10.5,44.4,10.5z"></path>
+                    <path d="M96.3,37.5h-4.9v-4.8c-2.4,3.5-6.4,5.6-10.7,5.6c-8.5,0-15.4-7-15.4-16.2c0-9.3,7-16.3,15.5-16.3c8.8,0,15.5,7.1,15.5,16.3L96.3,37.5z M80.8,10.5c-5.8,0-10.4,5.1-10.4,11.6s4.7,11.5,10.4,11.5c5.7,0,10.4-5.1,10.4-11.5C91.3,15.7,86.5,10.5,80.8,10.5z"></path>
+                    <path d="M115,37.5c-7.2,0.8-12.2-3.4-12.2-11.3V0h5v6.6h7v4.9h-7v14.8c0,5.5,3.3,6.8,7.1,6.6V37.5z"></path><path d="M119.2,6.6h5.4l8.5,24.1h0.1l8.5-24.1h5.4l-11.2,30.9h-5.5L119.2,6.6z"></path>
+                    <path d="M180,37.5h-4.9v-4.8c-2.4,3.5-6.4,5.6-10.7,5.6c-8.5,0-15.4-7-15.4-16.2c0-9.3,7-16.3,15.5-16.3c8.8,0,15.5,7.1,15.5,16.3V37.5z M164.5,10.5c-5.8,0-10.4,5.1-10.4,11.6s4.7,11.5,10.4,11.5c5.7,0,10.4-5.1,10.4-11.5C175,15.7,170.2,10.5,164.5,10.5z"></path>
+                    <path d="M0,33.2c3.6,3.2,8.2,5,13,4.9c6.8,0,11.2-3.7,11.2-9.3v-0.1c0-4.8-2.8-7.4-10-9.1c-6-1.4-7.6-2.5-7.6-5.1v-0.1c0-2.3,2.2-3.9,5.3-3.9c3.1,0.1,6.1,1.2,8.5,3.2l2.8-4C20,7.2,16,5.8,11.9,5.9c-6.3,0-10.7,3.7-10.7,9V15c0,5.7,3.7,7.7,10.4,9.3c5.5,1.3,7.2,2.4,7.2,5v0.1c0,2.5-2.3,4.1-5.7,4.1c-3.6,0-6.7-1.3-10-4.1L0,33.2z"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="nav-right">
+                    <div class="nav-search">
+                        <svg class="search_icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="18" height="18" viewBox="0 0 50 50">
+                            <path d="M 21 3 C 11.621094 3 4 10.621094 4 20 C 4 29.378906 11.621094 37 21 37 C 24.710938 37 28.140625 35.804688 30.9375 33.78125 L 44.09375 46.90625 L 46.90625 44.09375 L 33.90625 31.0625 C 36.460938 28.085938 38 24.222656 38 20 C 38 10.621094 30.378906 3 21 3 Z M 21 5 C 29.296875 5 36 11.703125 36 20 C 36 28.296875 29.296875 35 21 35 C 12.703125 35 6 28.296875 6 20 C 6 11.703125 12.703125 5 21 5 Z"></path>
+                        </svg>
+                        <input type="text" name="Search" placeholder="What Can We Help You Find?">
+                    </div>
+                    <div class="utility-icons">
+                        <div class="phone-link-container">
+                            <a href="#" class="phone-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone-icon lucide-phone">
+                                    <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
+                                <div class="phone-link-info">
+                                    <a href="#" class="info-title">Contact Us</a>
+                                    <hr>
+                                    <div class="info-row">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone-icon lucide-phone">
+                                            <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/>
+                                        </svg>
+                                        <a href="tel:18604535276">1-860-453-5276</a>
+                                    </div>
+                                    <div class="info-row">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail">
+                                            <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/>
+                                        </svg>
+                                        <a href="#">Email us</a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="/saved-items.html" class="wishlist-link" id="nav-heart">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart">
+                                <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/>
+                            </svg>
+                        </a>
+                        <div class="cart-container">
+                            <a href="./cart.html" class="cart-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart-icon lucide-shopping-cart"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/>
+                                    <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+                                </svg>
+                                <span class="cart-count" id="cart-count">0</span>
+                            </a>
+                            <!-- The Cart Dropdown -->
+                            <div class="cart-dropdown">
+                                <p>Your cart is empty.</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+            </div>    
+        </div>
+        <div class="nav-bottom">
+            <div class="all-categories">
+                <div class="all-c-svg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu">
+                        <path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/>
+                    </svg>
+                </div>
+                <span class="all-c-title">All Categories</span>
+            </div>
+            <div class="category-links">
+                <a href="#">Mattresses</a>
+                <a href="#">Furniture & Decor</a>
+                <a href="#">Bedding</a>
+                <a href="#">Bundles</a>
+                <a href="#" class="sale-link">Sale</a>
+            </div>
+        </div>
+    </div>
+</nav> 
+
+<div class="saved-items-page">
+  <h1>❤ Saved Items</h1>
+  <p>Want to save the products that you love? Click on the heart symbol to add them to your saved items.</p>
+  <p class="note">*Items will only be saved in Saved Items for up to 30 days and only on the device you are currently using.</p>
+  
+  <div id="savedItemsGrid" class="saved-items-grid">
+    <!-- Items rendered by JS -->
+  </div>
+</div>
+
+
+
+<footer>
+<section class="footer1">
+    <div class="footer-container">
+        <div class="footer-top">
+            <h2 class="footer-logo">saatva</h2>
+        </div>
+    <div class="footer-grid">
+        <div class="footer-col ">
+            <h4 class="footer-heading">Contact</h4>
+            <ul class="footer-list f-mb">
+                <li><a href="#" class="footer-link">Visit our help center</a></li>
+                <li><a href="#" class="footer-link">Chat with us</a></li>
+                <li><a href="#" class="footer-link">Email us</a></li>
+                <li><a href="#" class="footer-link">Visit a saatva viewing room</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4 class="footer-heading">Shopping Help</h4>
+            <ul class="footer-list">
+                <li><a href="#" class="footer-link">Mattresses quiz </a></li>
+                <li><a href="#" class="footer-link">Pillows quiz</a></li>
+                <li><a href="#" class="footer-link">Toppers quiz</a></li>
+                <li><a href="#" class="footer-link">Compare Mattresses</a></li>
+                <li><a href="#" class="footer-link">Review</a></li>
+                <li><a href="#" class="footer-link">Product Transparency Label</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4 class="footer-heading">Why Saatva?</h4>
+            <ul class="footer-list">
+                <li><a href="#" class="footer-link">Premium quality without the markups</a></li>
+                <li><a href="#" class="footer-link">Quality materials built to last</a></li>
+                <li><a href="#" class="footer-link">Sustainability</a></li>
+                <li><a href="#" class="footer-link">About us</a></li>
+                <li><a href="#" class="footer-link">Press</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4 class="footer-heading">Careers & Partnerships</h4>
+            <ul class="footer-list">
+                <li><a href="#" class="footer-link">Careers at saatva</a></li>
+                <li><a href="#" class="footer-link">Design Trade Program</a></li>
+                <li><a href="#" class="footer-link">Chiropractic Affiliate Program</a></li>
+                <li><a href="#" class="footer-link">Hospitality Program</a></li>
+                <li><a href="#" class="footer-link">Affiliate signup</a></li>
+                <li><a href="#" class="footer-link">Give $100 get $100</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4 class="footer-heading">Support</h4>
+            <ul class="footer-list">
+                <li><a href="#" class="footer-link">Trial, Returns & Exchange</a></li>
+                <li><a href="#" class="footer-link">Delivery & shipping</a></li>
+                <li><a href="#" class="footer-link">Warranty</a></li>
+                <li><a href="#" class="footer-link">Extend product protection</a></li>
+                <li><a href="#" class="footer-link">Track my order</a></li>
+                <li><a href="#" class="footer-link">FAQs</a></li>
+                <li><a href="#" class="footer-link">Manage Email Preferences</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4 class="footer-heading">Financing & Discounts</h4>
+            <ul class="footer-list">
+                <li><a href="#" class="footer-link">Financing with Affirm</a></li>
+                <li><a href="#" class="footer-link">Saatva Discounts Program</a></li>
+                <li><a href="#" class="footer-link">HSA/FSA Reimbursement</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</section>
+<section class="footer2">
+    <div class="legal-container">
+        <span class="footer-email">
+            Get access to our latest <a data-selector="link-to-sale" href="/sale" target="_blank" rel="noreferrer">sales</a>, 
+            <a data-selector="link-to-press-room" href="/press-room" target="_blank" rel="noreferrer"> product news</a> &amp; 
+            <a data-selector="link-to-blog" href="/blog" target="_blank" rel="noreferrer">sleep tips</a>.</span>
+    </div>
+    <form class="email-form" aria-label="Email Subscription">
+        <div class="form-text-input">
+            <input id="email-subscription" name="email-subscription" inputmode="text" type="email" class="" autocomplete="email" value="" placeholder="Enter your email address" required>
+            <div id="submit-error" class="form-error" role="alert"></div>
+            <div class="email-subscription-form_successMessage" role="status"></div>
+        </div>
+        <button type="submit" class="email_btn">Sign Up</button>
+    </form>
+
+    <div class="social-container">
+        <a href="#">
+            <img width="50" height="50" src="https://img.icons8.com/ios/50/instagram-new--v1.png" alt="instagram-new--v1"/>
+        </a>
+        <a href="#">
+            <img width="32" height="32" src="https://img.icons8.com/windows/32/facebook-new.png" alt="facebook-new"/>
+        </a>
+        <a href="#">
+            <img width="50" height="50" src="https://img.icons8.com/ios/50/twitterx--v2.png" alt="twitterx--v2"/>
+        </a>
+        <a href="#">
+            <img width="50" height="50" src="https://img.icons8.com/ios/50/linkedin.png" alt="linkedin"/>
+        </a>
+        <a href="#">
+            <img width="50" height="50" src="https://img.icons8.com/ios/50/youtube-play--v1.png" alt="youtube-play--v1"/>
+        </a>
+    </div>
+    <div class="footer-bottom">
+        <div class="footer-bottom-container">
+            <p class="footer-copyright">
+                Copyright © 2010-2026 Whitestone Home Furnishings, LLC
+            </p>
+            <nav class="footer-legal-nav">
+                <a href="#" class="footer-legal-link">Terms</a>
+                <a href="#" class="footer-legal-link">Privacy</a>
+                <a href="#" class="footer-legal-link">CA Supply Chains Act</a>
+                <a href="#" class="footer-legal-link">CA Privacy Notice</a>
+                <a href="#" class="footer-legal-link">Accessibility</a>
+                <a href="#" class="footer-legal-link">Do Not Sell My Personal Information</a>
+            </nav>
+        </div>
+    </div>
+</section>
+</footer>
+
+<script src="./js/saved-items.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

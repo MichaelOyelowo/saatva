@@ -151,6 +151,7 @@ const mattressCatalog = {
         img: "https://res.cloudinary.com/dffuf2gwh/image/upload/v1767985442/solaire-lifestyle-standard-3-2_eoqw4a.jpg",
         hoverImg: "https://res.cloudinary.com/dffuf2gwh/image/upload/v1767985438/saatva-latex-hybrid-detail1-3-2_qdgy2q.jpg",
         badge: "MOST POPULAR",
+        url: "classic.html",
         reviews: "4,989"
     },
     "rx": {
@@ -228,12 +229,14 @@ function renderRecentlyViewed() {
         const item = mattressCatalog[id];
         return `
             <div class="product-card">
+                <a href="${item.url}" target="_blank">
                 <div class="image-container">
                     <span class="badge">${item.badge}</span>
                     <img src="${item.img}" class="main-img" alt="${item.name}">
                     <!-- Secondary Image for your Hover effect -->
                     <img src="${item.hoverImg}" class="hover-img" alt="Detail">
                 </div>
+                </a>
                 
                 <div class="product-info">
                     <div class="ratings">
@@ -247,11 +250,11 @@ function renderRecentlyViewed() {
                         <span class="current-price">${item.price}</span>
                         <span class="old-price">${item.oldPrice}</span>
                     </div>
-                    <p class="affirm-text">Or as low as <strong>${item.affirmPrice}</strong> with 
+                    <a href="${item.url}" target="_blank"><p class="affirm-text">Or as low as <strong>${item.affirmPrice}</strong> with 
                         <span class="affirm-brand">
                             <img src="./black_logo-transparent_bg-removebg-preview.png" alt="affirm">
                         </span>
-                    </p>
+                    </p></a>
                 </div>
             </div>
         `;
@@ -260,17 +263,21 @@ function renderRecentlyViewed() {
 
 // listener for clicks on the bottom section cards
 document.querySelectorAll('.clickable-product').forEach(card => {
-    card.addEventListener('click', () => {
+    card.addEventListener('click', (e) => {
         const id = card.getAttribute('data-id');
+        if (e.target.tagName !== 'A') {
+            window.location.href = `${id}.html`; // Takes them to classic.html
+        }
         let history = JSON.parse(localStorage.getItem('saatva_history')) || [];
         history = history.filter(item => item !== id);
         history.unshift(id);
-        localStorage.setItem('saatva_history', JSON.stringify(history.slice(0, 4)));
+        localStorage.setItem('saatva_history', JSON.stringify(history.slice(0, 5)));
         renderRecentlyViewed();
     });
 });
 
 document.addEventListener('DOMContentLoaded', renderRecentlyViewed);
+
 
 
 
