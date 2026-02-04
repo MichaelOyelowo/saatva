@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Product Gallery</title>
+    <style>
+        :root {
+            --primary: #4285f4;
+            --success: #1e8e3e;
+            --error: #d93025;
+            --bg: #f8f9fa;
+            --text: #202124;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: var(--bg);
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Professional Header & Search */
+        .controls {
+            max-width: 1200px;
+            margin: 0 auto 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        #search-input {
+            padding: 12px 20px;
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        #search-input:focus { border-color: var(--primary); box-shadow: 0 0 8px rgba(66,133,244,0.2); }
+
+        /* The Grid System */
+        #product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Dynamic Card Styling */
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-size: 1rem;
+            color: var(--text);
+            margin: 10px 0;
+            height: 40px;
+            overflow: hidden;
+        }
+
+        .card-footer {
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price { color: var(--success); font-weight: bold; font-size: 1.1rem; }
+        
+        .badge {
+            background: #e8f0fe;
+            color: var(--primary);
+            font-size: 0.75rem;
+            padding: 4px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        /* Loading & Errors */
+        .spinner {
+            width: 50px; height: 50px;
+            border: 5px solid #ddd; border-top-color: var(--primary);
+            border-radius: 50%; animation: spin 1s linear infinite;
+            margin: 50px auto;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .hidden { display: none !important; }
+    </style>
+</head>
+<body>
+
+    <div class="controls">
+        <h1>Store Inventory</h1>
+        <input type="text" id="search-input" placeholder="Search products...">
+    </div>
+
+    <div id="loader" class="spinner"></div>
+    
+    <div id="product-grid">
+        </div>
+
+<script>
+    let allProducts = []; // Store data globally for filtering
+
+    async function fetchProducts() {
+        const grid = document.getElementById('product-grid');
+        const loader = document.getElementById('loader');
+
+        try {
+            const response = await fetch('https://fakestoreapi.com/products');
+            if (!response.ok) throw new Error("Failed to fetch");
+            
+            allProducts = await response.json();
+            displayProducts(allProducts);
+            
+        } catch (error) {
+            grid.innerHTML = `<p style="color:red">Error loading products: ${error.message}</p>`;
+        } finally {
+            loader.classList.add('hidden');
+        }
+    }
+
+    // Professional Way: Create HTML strings or Elements dynamically
+    function displayProducts(products) {
+        const grid = document.getElementById('product-grid');
+        grid.innerHTML = products.map(product => `
+            <div class="card">
+                <span class="badge">${product.category}</span>
+                <img src="${product.image}" alt="${product.title}">
+                <h3>${product.title.substring(0, 50)}...</h3>
+                <div class="card-footer">
+                    <span class="price">$${product.price}</span>
+                    <button style="cursor:pointer; border:none; background:none; color:#4285f4;">Details →</button>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    // Additional Feature: Real-time Search
+    document.getElementById('search-input').addEventListener('input', (e) => {
+        const searchTerm = e.target.value.toLowerCase();
+        const filtered = allProducts.filter(p => 
+            p.title.toLowerCase().includes(searchTerm) || 
+            p.category.toLowerCase().includes(searchTerm)
+        );
+        displayProducts(filtered);
+    });
+
+    fetchProducts();
+</script>
+</body>
+</html>
