@@ -1,3 +1,53 @@
+
+/* ===============================
+Nav bar cart count and dropdown
+================================== */
+document.addEventListener('DOMContentLoaded', function () {
+  updateCartCount();
+});
+
+function updateCartCount() {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const countEl = document.getElementById('cart-count');
+  const dropdown = document.querySelector('.cart-dropdown');
+  const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+
+  // Update badge
+  if (countEl) {
+    countEl.textContent = totalQty;
+    countEl.style.display = totalQty > 0 ? 'flex' : 'none';
+  }
+
+  // Update dropdown
+  if (dropdown) {
+    if (cart.length === 0) {
+      dropdown.innerHTML = '<p>Your cart is empty.</p>';
+    } else {
+      const subtotal = cart.reduce((sum, item) => sum + item.salePrice * item.qty, 0);
+      const itemsHTML = cart.map(item => `
+        <div class="dropdown-item">
+          <img src="${item.image}" alt="${item.name}" />
+          <div class="dropdown-item-info">
+            <span class="dropdown-item-name">${item.name}</span>
+            <span class="dropdown-item-size">${item.size}</span>
+            <span class="dropdown-item-price">$${(item.salePrice * item.qty).toLocaleString()}</span>
+          </div>
+        </div>
+      `).join('');
+
+      dropdown.innerHTML = `
+        ${itemsHTML}
+        <div class="dropdown-subtotal">
+          <span>Subtotal</span>
+          <span>$${subtotal.toLocaleString()}</span>
+        </div>
+        <a href="./cart.html" class="dropdown-view-cart-btn">View Cart</a>
+      `;
+    }
+  }
+}
+
+
 /* ==================================
     Promo Modal
 ===================================== */
@@ -423,3 +473,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
