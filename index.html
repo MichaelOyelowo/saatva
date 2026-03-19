@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saatva</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preload" as="video" href="https://saatva-videos.imgix.video/homepage/homepage-hero.mp4?fm=mp4" type="video/mp4"/>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -370,7 +371,7 @@
 <div class="background-container">
     <div class="video-coverage">
         <video autoplay muted loop playsinline class="VideoHero_video">
-            <source src="https://saatva-videos.imgix.video/homepage/homepage-hero.mp4?fm=mp4" type="video/mp4">
+            <source src="https://saatva-videos.imgix.video/homepage/homepage-hero.mp4?fm=mp4" type="video/mp4" fetchpriority="high">
         </video>
     </div>
     <div class="hero-content">
